@@ -1,2 +1,5 @@
 Total  Months  Equals  86
 Total  Profit  Loss:  $38382578
+Monthly  Average  equals:  -2315.12
+Greatest  Decrease  equals:  $-2196167  on  Sep-2013
+Greatest  Inrease  equals:  $1926159  on  Feb-2012

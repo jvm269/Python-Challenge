@@ -57,7 +57,10 @@ with open(output_path, 'w', newline='') as pybfile:
     writer= csv.writer(pybfile, delimiter=' ', escapechar=" " , quoting= csv.QUOTE_NONE)
     writer.writerow([f"Total Months Equals {total_months}"])
     writer.writerow([f"Total Profit Loss: ${total_profits_losses}"])
-    writer.writeerow([])    
+    writer.writerow([f"Monthly Average equals: {monthly_average:.2f}"])
+    writer.writerow([f"Greatest Decrease equals: ${greatest_decrease} on {greatest_decrease_date}"])
+    writer.writerow([f"Greatest Inrease equals: ${greatest_increase} on {greatest_increase_date}"])
+
 
 
 
