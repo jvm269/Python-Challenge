@@ -1,6 +1,7 @@
 #import modules 
 import csv
-csvpath = ('budget_data.csv')
+csvpath = 'budget_data.csv'
+output_path = "/Users/jihanmckenzie/Desktop/Python-Challenge/PyBank/PyBank.txt"
 total_months = 0
 total_profits_losses = 0
 greatest_increase_date = ""
@@ -38,7 +39,6 @@ with open(csvpath) as csvfile:
             greatest_decrease_date = row[0]
 
 
-
 print("Financial Analysis")
 
 print("--------------------")
@@ -51,6 +51,14 @@ print(f"Total Profit Loss: ${total_profits_losses}")
 print(f"Monthly Average equals: {monthly_average:.2f}")
 print(f"Greatest Decrease equals: ${greatest_decrease} on {greatest_decrease_date}")
 print(f"Greatest Inrease equals: ${greatest_increase} on {greatest_increase_date}")
+
+
+with open(output_path, 'w', newline='') as pybfile: 
+    writer= csv.writer(pybfile, delimiter=' ', escapechar=" " , quoting= csv.QUOTE_NONE)
+    writer.writerow([f"Total Months Equals {total_months}"])
+    writer.writerow([f"Total Profit Loss: ${total_profits_losses}"])
+    writer.writeerow([])    
+
 
 
 
